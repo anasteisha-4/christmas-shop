@@ -19,6 +19,7 @@ html {
 
 body {
 	font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
 }
 
 header {
@@ -152,6 +153,9 @@ h2, h3, h4, p {
 	color: var(--static-white-color);
 	overflow: hidden;
 	text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #section-3 img {
@@ -226,6 +230,7 @@ h2, h3, h4, p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .gifts-container {
@@ -291,6 +296,9 @@ h2, h3, h4, p {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
 
 #content-5 {
@@ -337,5 +345,105 @@ h2, h3, h4, p {
 }
 
 footer {
-	height: 496px;
+    padding: 60px 0;
 }
+
+#contact-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-card {
+    width: 417.33px;
+    background-color: var(--content-background-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: 12px;
+}
+
+.contact-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.contact-card > * {
+    margin-bottom: 12px;
+}
+
+.contact-card:hover {
+    cursor: pointer;
+}
+
+.contact-card:hover > * {
+    color: var(--primary-color);
+}
+
+#social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-media {
+    margin-top: 60px;
+}
+
+#social-media * {
+    color: var(--dark-color);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.social-icons svg {
+    stroke: var(--dark-color);
+}
+
+.social-icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+}
+
+.social-icon-container:hover {
+    cursor: pointer;
+}
+
+.social-icon-container:hover svg {
+    stroke: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+a:active {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+#social-media > a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* * {
+    border: 1px solid black;
+} */
