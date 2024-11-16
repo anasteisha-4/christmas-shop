@@ -18,6 +18,8 @@
   height: 404px;
   padding: 60px 0;
   box-sizing: border-box;
+	position: relative;
+	top: -12px;
 }
 
 #text-2 > * {
@@ -70,6 +72,8 @@
   padding: 60px 0;
   width: 426px;
   margin: auto 0;
+	position: relative;
+	top: 12px;
 }
 
 #content-2 img {
@@ -85,7 +89,8 @@
 
 #section-3 {
   height: 488px;
-  padding: 0 60px;
+  padding: 60px 80px;
+	box-sizing: border-box;
   color: var(--static-white-color);
   overflow: hidden;
   text-align: center;
@@ -219,6 +224,7 @@
   border-radius: 20px;
   background-color: var(--static-white-40-color);
   padding: 12px;
+	box-sizing: border-box;
 }
 
 .time {
