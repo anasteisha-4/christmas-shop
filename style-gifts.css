@@ -1,12 +1,13 @@
 main {
-  background: url("img/bg-garland.png") no-repeat center top,
+  background:
+    url('img/bg-garland.png') no-repeat center top,
     var(--primary-color);
   background-size: contain;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  height: 1394px; /*delete*/
   border-radius: 20px;
   padding: 60px 0;
+}
+
+#Gifts {
   color: var(--static-white-color);
   box-sizing: border-box;
 
@@ -15,8 +16,8 @@ main {
   align-items: center;
 }
 
-main > * {
-  margin: 20px;
+#Gifts > * {
+  margin-bottom: 20px;
 }
 
 #tabs {
@@ -27,6 +28,7 @@ main > * {
   border-radius: 12px;
   padding: 12px 20px;
   margin: 0px 4px;
+  transition: background-color 0.5s ease;
 }
 
 .tab:hover {
@@ -34,7 +36,7 @@ main > * {
   cursor: pointer;
 }
 
-.gifts-box {
+#gifts-box {
   margin: 0;
   padding: 0;
   display: flex;

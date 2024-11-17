@@ -1,6 +1,8 @@
-#section-1 {
-  background: url("img/bg-snow.png") no-repeat center,
-    url("img/bg-ball.png") no-repeat center, var(--primary-color);
+#Hero {
+  background:
+    url('img/bg-snow.png') no-repeat center,
+    url('img/bg-ball.png') no-repeat center,
+    var(--primary-color);
   background-size: cover;
   height: 524px;
   border-top-left-radius: 20px;
@@ -13,26 +15,26 @@
   align-items: center;
 }
 
-#content-1 {
+#content-hero {
   width: 426px;
   height: 404px;
   padding: 60px 0;
   box-sizing: border-box;
-	position: relative;
-	top: -12px;
+  position: relative;
+  top: -12px;
 }
 
-#text-2 > * {
+#text-about > * {
   padding-bottom: 20px;
 }
 
-#content-1 > * {
+#content-hero > * {
   margin: 12px 0;
   text-align: center;
 }
 
-#content-1 .button,
-#section-5 .button {
+#content-hero .button,
+#CTA .button {
   display: block;
   color: var(--static-white-color);
   padding: 20px 32px;
@@ -40,17 +42,22 @@
   margin: auto;
   background-color: var(--dark-color);
   border-radius: 20px;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
-#content-1 .button:hover,
-#section-5 .button:hover {
+#content-hero .button:hover,
+#CTA .button:hover {
   background-color: var(--static-white-color);
   color: var(--dark-color);
   cursor: pointer;
 }
 
-#section-2 {
-  background: url("img/bg-snow.png") no-repeat center, var(--primary-color);
+#About {
+  background:
+    url('img/bg-snow.png') no-repeat center,
+    var(--primary-color);
   background-size: cover;
   height: 648px;
   display: flex;
@@ -58,7 +65,7 @@
   align-items: center;
 }
 
-#content-2 {
+#content-about {
   width: 1276px;
   background-color: var(--static-white-color);
   border-radius: 20px;
@@ -68,29 +75,31 @@
   box-sizing: border-box;
 }
 
-#text-2 {
+#text-about {
   padding: 60px 0;
   width: 426px;
   margin: auto 0;
-	position: relative;
-	top: 12px;
+  position: relative;
+  top: 12px;
 }
 
-#content-2 img {
+#content-about img {
   height: 528px;
   border-radius: 20px;
 }
 
-#section-3,
-#section-4 {
-  background: url("img/bg-snow.png") no-repeat center, var(--primary-color);
+#Slider,
+#BestGifts {
+  background:
+    url('img/bg-snow.png') no-repeat center,
+    var(--primary-color);
   background-size: cover;
 }
 
-#section-3 {
+#Slider {
   height: 488px;
   padding: 60px 80px;
-	box-sizing: border-box;
+  box-sizing: border-box;
   color: var(--static-white-color);
   overflow: hidden;
   text-align: center;
@@ -99,28 +108,28 @@
   justify-content: center;
 }
 
-#section-3 img {
+#Slider img {
   width: 200px;
   height: 200px;
   border-radius: 20px;
 }
 
-.slider {
+#slide {
   padding: 20px 0;
   display: flex;
   align-items: center;
 }
 
-.slider > * {
+#slide > * {
   margin-right: 20px;
 }
 
-.buttons-3 {
+.buttons-slider {
   display: flex;
   justify-content: flex-end;
 }
 
-.buttons-3 .button {
+.buttons-slider .button {
   border: 1px solid var(--static-white-color);
   border-radius: 20px;
   box-sizing: border-box;
@@ -145,31 +154,23 @@
   margin-left: 20px;
 }
 
-#left-arrow {
-  background: url(img/left\ arrow\ white.png) no-repeat center;
-  background-size: 20px;
-}
-
+#left-arrow,
 #right-arrow {
-  background: url(img/right\ arrow\ white.png) no-repeat center;
   background-size: 20px;
+  transition:
+    background 0.5s ease,
+    stroke 0.5s ease;
+  stroke: var(--static-white-color);
 }
 
-#left-arrow:hover {
-  background: url(img/left\ arrow\ primary.png) no-repeat center,
-    var(--static-white-color);
-  background-size: 20px;
-  cursor: pointer;
-}
-
+#left-arrow:hover,
 #right-arrow:hover {
-  background: url(img/right\ arrow\ primary.png) no-repeat center,
-    var(--static-white-color);
-  background-size: 20px;
+  stroke: var(--primary-color);
+  background-color: var(--static-white-color);
   cursor: pointer;
 }
 
-#section-4 {
+#BestGifts {
   height: 554px;
   display: flex;
   flex-direction: column;
@@ -183,9 +184,11 @@
   justify-content: space-between;
 }
 
-#section-5 {
-  background: url("img/bg-snow.png") no-repeat center,
-    url("img/bg-forest.png") no-repeat center, var(--primary-color);
+#CTA {
+  background:
+    url('img/bg-snow.png') no-repeat center,
+    url('img/bg-forest.png') no-repeat center,
+    var(--primary-color);
   background-size: cover;
   height: 668px;
   color: var(--static-white-color);
@@ -196,7 +199,7 @@
   border-bottom-right-radius: 20px;
 }
 
-#content-5 {
+#content-cta {
   width: 426px;
   height: 428px;
   padding: 60px 0;
@@ -206,11 +209,11 @@
   align-items: center;
 }
 
-#content-5 > * {
+#content-cta > * {
   margin-bottom: 20px;
 }
 
-#content-5 > h2 {
+#content-cta > h2 {
   width: 426px;
   text-align: center;
 }
@@ -224,7 +227,7 @@
   border-radius: 20px;
   background-color: var(--static-white-40-color);
   padding: 12px;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .time {

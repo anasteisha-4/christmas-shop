@@ -1,4 +1,5 @@
 :root {
+  font-family: 'Montserrat', sans-serif;
   --primary-color: rgb(255, 70, 70);
   --primary-10-color: rgba(255, 70, 70, 0.1);
   --dark-color: rgb(24, 28, 41);
@@ -15,10 +16,10 @@
 html {
   width: 1440px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   color: var(--dark-color);
   padding: 0;
   margin: 0;
@@ -66,6 +67,9 @@ header {
   padding: 12px 20px;
   border-radius: 12px;
   margin-left: 4px;
+  transition:
+    color 0.5s ease,
+    background-color 0.5s ease;
 }
 
 .menu-item:hover {
@@ -103,6 +107,7 @@ footer {
 
 .contact-card > * {
   margin-bottom: 12px;
+  transition: color 0.5s ease;
 }
 
 .contact-card:hover {
@@ -118,9 +123,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-#social-media {
   margin-top: 60px;
 }
 
@@ -151,16 +153,19 @@ footer {
   cursor: pointer;
 }
 
+.social-icon-container svg {
+  transition: stroke 0.5s ease;
+}
+
 .social-icon-container:hover svg {
   stroke: var(--primary-color);
 }
 
 a {
-  text-decoration: none;
-  color: var(--dark-color);
+  transition: color 0.5s ease;
 }
 
-a:active {
+a, a:active {
   text-decoration: none;
   color: var(--dark-color);
 }
@@ -169,13 +174,8 @@ a:active {
   color: var(--primary-color);
   cursor: pointer;
 }
-/* 
-* {
-  border: 1px solid black;
-} */
 
 /* TYPOGRAPHY */
-
 .header-1 {
   font-size: 32px;
   font-weight: 600;
@@ -231,7 +231,7 @@ a:active {
 }
 
 .caption {
-  font-family: "Allura", cursive;
+  font-family: 'Allura', cursive;
   font-size: 24px;
   font-weight: 400;
   line-height: 100%;
@@ -272,6 +272,7 @@ a:active {
 
 .gift-name {
   color: var(--dark-color);
+  transition: color 0.5s ease;
 }
 
 .for-work {
