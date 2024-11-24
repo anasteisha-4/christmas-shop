@@ -14,9 +14,12 @@
 }
 
 html {
-  width: 1440px;
+  width: min(1440px, 100vw);
   margin: 0 auto;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 body {
@@ -39,12 +42,13 @@ h1 {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  width: 1276px;
+  width: min(1276px, 100%);
   margin: 0 auto;
+  padding: 0 8px;
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
 }
 
 .logo {
@@ -56,6 +60,8 @@ header {
 
 .logo-container {
   padding: 8px 20px;
+  display: block;
+  justify-self: start;
 }
 
 .logo-container:hover {
@@ -72,6 +78,14 @@ header {
     background-color 0.5s ease;
 }
 
+.menu {
+  justify-self: end;
+}
+
+.menu-burger-mobile {
+  display: none;
+}
+
 .menu-item:hover {
   cursor: pointer;
   color: var(--primary-color);
@@ -79,16 +93,18 @@ header {
 }
 
 footer {
-  padding: 60px 0;
+  padding: 60px 8px;
 }
 
 #contact-cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(340px, 1fr));
+  width: min(1276px, 100%);
+  gap: 12px;
+  margin: 0 auto;
 }
 
 .contact-card {
-  width: 417.33px;
   height: 204px;
   background-color: var(--content-background-color);
   border-radius: 20px;
@@ -96,7 +112,6 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin: 0 6px;
   box-sizing: border-box;
 }
 
@@ -165,7 +180,8 @@ a {
   transition: color 0.5s ease;
 }
 
-a, a:active {
+a,
+a:active {
   text-decoration: none;
   color: var(--dark-color);
 }
@@ -294,4 +310,36 @@ a, a:active {
   font-size: 80px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1059px) {
+  #contact-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    width: 100%;
+  }
+
+  .menu-burger-mobile {
+    display: block;
+    justify-self: end;
+    padding: 8px;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
 }
