@@ -37,7 +37,7 @@ p {
 }
 
 h1 {
-  width: 426px;
+  width: min(600px, 100%);
   text-align: center;
 }
 
@@ -47,20 +47,21 @@ header {
   padding: 0 8px;
   height: 64px;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
 .logo {
   width: 24px;
   height: 24px;
-  vertical-align: middle;
   margin-right: 4px;
 }
 
 .logo-container {
   padding: 8px 20px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   justify-self: start;
 }
 
