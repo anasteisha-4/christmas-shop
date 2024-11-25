@@ -38,7 +38,7 @@ p {
 }
 
 header {
-  width: min(1276px, 100%);
+  width: min(1292px, 100%);
   margin: 0 auto;
   padding: 0 8px;
   height: 64px;
@@ -162,7 +162,6 @@ a:active {
   color: var(--dark-color);
 }
 
-/* TYPOGRAPHY */
 .header-1 {
   font-size: 32px;
   font-weight: 600;
