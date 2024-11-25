@@ -14,7 +14,7 @@
 }
 
 html {
-  width: min(1440px, 100vw);
+  width: min(1440px, 100%);
   margin: 0 auto;
   scroll-behavior: smooth;
   display: flex;
@@ -321,10 +321,6 @@ a:active {
 }
 
 @media screen and (max-width: 768px) {
-  html {
-    width: 100%;
-  }
-
   .menu-burger-mobile {
     display: block;
     justify-self: end;
@@ -333,14 +329,5 @@ a:active {
 
   .menu {
     display: none;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  html {
-    width: 100%;
-  }
-  header {
-    width: 100%;
   }
 }
