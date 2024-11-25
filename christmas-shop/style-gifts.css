@@ -7,6 +7,11 @@ main {
   padding: 60px 0;
 }
 
+h1 {
+  width: min(426px, 100%);
+  text-align: center;
+}
+
 #Gifts {
   color: var(--static-white-color);
   box-sizing: border-box;
