@@ -26,6 +26,7 @@ body {
   color: var(--dark-color);
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -42,8 +43,9 @@ header {
   padding: 0 8px;
   height: 64px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -58,10 +60,6 @@ header {
   justify-content: center;
   align-items: center;
   justify-self: start;
-}
-
-.logo-container:hover {
-  cursor: pointer;
 }
 
 .logo-container > span {
@@ -84,12 +82,6 @@ header {
 
 .menu-burger-mobile {
   display: none;
-}
-
-.menu-item:hover {
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: var(--primary-10-color);
 }
 
 footer {
@@ -125,14 +117,6 @@ footer {
   transition: color 0.5s ease;
 }
 
-.contact-card:hover {
-  cursor: pointer;
-}
-
-.contact-card:hover > * {
-  color: var(--primary-color);
-}
-
 #social-media {
   display: flex;
   flex-direction: column;
@@ -164,16 +148,8 @@ footer {
   margin: 0 6px;
 }
 
-.social-icon-container:hover {
-  cursor: pointer;
-}
-
 .social-icon-container svg {
   transition: stroke 0.5s ease;
-}
-
-.social-icon-container:hover svg {
-  stroke: var(--primary-color);
 }
 
 a {
@@ -184,11 +160,6 @@ a,
 a:active {
   text-decoration: none;
   color: var(--dark-color);
-}
-
-#social-media > a:hover {
-  color: var(--primary-color);
-  cursor: pointer;
 }
 
 /* TYPOGRAPHY */
@@ -254,14 +225,6 @@ a:active {
   letter-spacing: 1.2px;
 }
 
-.gift:hover {
-  cursor: pointer;
-}
-
-.gift:hover .gift-name {
-  color: var(--primary-color);
-}
-
 .gift {
   width: 310px;
   height: 342px;
@@ -321,12 +284,53 @@ a:active {
 
 @media screen and (max-width: 768px) {
   .menu-burger-mobile {
-    display: block;
+    display: flex;
+    align-items: center;
     justify-self: end;
-    padding: 8px;
   }
 
   .menu {
     display: none;
+  }
+}
+
+@media screen and (pointer: fine) {
+  .logo-container:hover {
+    cursor: pointer;
+  }
+
+  .menu-item:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--primary-10-color);
+  }
+
+  .contact-card:hover {
+    cursor: pointer;
+  }
+
+  .contact-card:hover > * {
+    color: var(--primary-color);
+  }
+
+  .social-icon-container:hover {
+    cursor: pointer;
+  }
+
+  .social-icon-container:hover svg {
+    stroke: var(--primary-color);
+  }
+
+  #social-media > a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .gift:hover {
+    cursor: pointer;
+  }
+
+  .gift:hover .gift-name {
+    color: var(--primary-color);
   }
 }

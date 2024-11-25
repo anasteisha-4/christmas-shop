@@ -42,11 +42,6 @@ h1 {
   white-space: nowrap;
 }
 
-.tab:hover {
-  background-color: var(--static-white-20-color);
-  cursor: pointer;
-}
-
 #gifts-box {
   margin: 0;
   padding: 0;
@@ -70,5 +65,12 @@ h1 {
 @media screen and (max-width: 395px) {
   #tabs {
     gap: 0;
+  }
+}
+
+@media screen and (pointer: fine) {
+  .tab:hover {
+    background-color: var(--static-white-20-color);
+    cursor: pointer;
   }
 }

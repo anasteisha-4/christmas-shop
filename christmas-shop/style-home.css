@@ -46,13 +46,6 @@ h1 {
     color 0.5s ease;
 }
 
-#content-hero .button:hover,
-#CTA .button:hover {
-  background-color: var(--static-white-color);
-  color: var(--dark-color);
-  cursor: pointer;
-}
-
 #About {
   background:
     url('img/bg-snow.png') no-repeat center,
@@ -175,13 +168,6 @@ h1 {
   stroke: var(--static-white-color);
 }
 
-#left-arrow:hover,
-#right-arrow:hover {
-  stroke: var(--primary-color);
-  background-color: var(--static-white-color);
-  cursor: pointer;
-}
-
 #BestGifts {
   padding: 60px 8px;
   box-sizing: border-box;
@@ -285,5 +271,21 @@ h1 {
   }
   #text-about {
     padding: 60px 20px;
+  }
+}
+
+@media screen and (pointer: fine) {
+  #content-hero .button:hover,
+  #CTA .button:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+    cursor: pointer;
+  }
+
+  #left-arrow:hover,
+  #right-arrow:hover {
+    stroke: var(--primary-color);
+    background-color: var(--static-white-color);
+    cursor: pointer;
   }
 }
