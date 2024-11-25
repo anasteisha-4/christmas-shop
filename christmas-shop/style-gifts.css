@@ -7,6 +7,11 @@ main {
   padding: 60px 0;
 }
 
+h1 {
+  width: min(426px, 100%);
+  text-align: center;
+}
+
 #Gifts {
   color: var(--static-white-color);
   box-sizing: border-box;
@@ -14,6 +19,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 8px;
 }
 
 #Gifts > * {
@@ -21,28 +27,50 @@ main {
 }
 
 #tabs {
+  width: min(474px, 100%);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 8px 20px 8px;
 }
 
 .tab {
   border-radius: 12px;
   padding: 12px 20px;
-  margin: 0px 4px;
   transition: background-color 0.5s ease;
-}
-
-.tab:hover {
-  background-color: var(--static-white-20-color);
-  cursor: pointer;
+  white-space: nowrap;
 }
 
 #gifts-box {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 310px);
+  gap: 12px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  width: 1276px;
-  height: 1050px;
+  justify-content: center;
+  width: min(1276px, 100%);
+}
+
+@media screen and (max-width: 767px) {
+  #tabs {
+    gap: clamp(0, 1vw, 8px);
+  }
+  .tab {
+    padding: 12px clamp(8px, 2.1vw, 20px);
+  }
+}
+
+@media screen and (max-width: 395px) {
+  #tabs {
+    gap: 0;
+  }
+}
+
+@media screen and (pointer: fine) {
+  .tab:hover {
+    background-color: var(--static-white-20-color);
+    cursor: pointer;
+  }
 }

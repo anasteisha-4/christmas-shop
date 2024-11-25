@@ -14,15 +14,19 @@
 }
 
 html {
-  width: 1440px;
+  width: min(1440px, 100%);
   margin: 0 auto;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 body {
   color: var(--dark-color);
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -33,33 +37,33 @@ p {
   margin: 0;
 }
 
-h1 {
-  width: 426px;
-  text-align: center;
-}
-
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  width: 1276px;
+  width: min(1292px, 100%);
   margin: 0 auto;
+  padding: 0 8px;
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .logo {
   width: 24px;
   height: 24px;
-  vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .logo-container {
   padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: start;
 }
 
-.logo-container:hover {
-  cursor: pointer;
+.logo-container > span {
+  white-space: nowrap;
 }
 
 .menu-item {
@@ -72,23 +76,27 @@ header {
     background-color 0.5s ease;
 }
 
-.menu-item:hover {
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: var(--primary-10-color);
+.menu {
+  justify-self: end;
+}
+
+.menu-burger-mobile {
+  display: none;
 }
 
 footer {
-  padding: 60px 0;
+  padding: 60px 8px;
 }
 
 #contact-cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(340px, 1fr));
+  width: min(1276px, 100%);
+  gap: 12px;
+  margin: 0 auto;
 }
 
 .contact-card {
-  width: 417.33px;
   height: 204px;
   background-color: var(--content-background-color);
   border-radius: 20px;
@@ -96,7 +104,6 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin: 0 6px;
   box-sizing: border-box;
 }
 
@@ -108,14 +115,6 @@ footer {
 .contact-card > * {
   margin-bottom: 12px;
   transition: color 0.5s ease;
-}
-
-.contact-card:hover {
-  cursor: pointer;
-}
-
-.contact-card:hover > * {
-  color: var(--primary-color);
 }
 
 #social-media {
@@ -149,33 +148,20 @@ footer {
   margin: 0 6px;
 }
 
-.social-icon-container:hover {
-  cursor: pointer;
-}
-
 .social-icon-container svg {
   transition: stroke 0.5s ease;
-}
-
-.social-icon-container:hover svg {
-  stroke: var(--primary-color);
 }
 
 a {
   transition: color 0.5s ease;
 }
 
-a, a:active {
+a,
+a:active {
   text-decoration: none;
   color: var(--dark-color);
 }
 
-#social-media > a:hover {
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-/* TYPOGRAPHY */
 .header-1 {
   font-size: 32px;
   font-weight: 600;
@@ -238,14 +224,6 @@ a, a:active {
   letter-spacing: 1.2px;
 }
 
-.gift:hover {
-  cursor: pointer;
-}
-
-.gift:hover .gift-name {
-  color: var(--primary-color);
-}
-
 .gift {
   width: 310px;
   height: 342px;
@@ -294,4 +272,64 @@ a, a:active {
   font-size: 80px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1059px) {
+  #contact-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-burger-mobile {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (pointer: fine) {
+  .logo-container:hover {
+    cursor: pointer;
+  }
+
+  .menu-item:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--primary-10-color);
+  }
+
+  .contact-card:hover {
+    cursor: pointer;
+  }
+
+  .contact-card:hover > * {
+    color: var(--primary-color);
+  }
+
+  .social-icon-container:hover {
+    cursor: pointer;
+  }
+
+  .social-icon-container:hover svg {
+    stroke: var(--primary-color);
+  }
+
+  #social-media > a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .gift:hover {
+    cursor: pointer;
+  }
+
+  .gift:hover .gift-name {
+    color: var(--primary-color);
+  }
 }
