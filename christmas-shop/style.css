@@ -60,6 +60,7 @@ header {
   justify-content: center;
   align-items: center;
   justify-self: start;
+  z-index: 1;
 }
 
 .logo-container > span {
@@ -67,16 +68,17 @@ header {
 }
 
 .menu-item {
-  display: inline-block;
+  display: block;
   padding: 12px 20px;
   border-radius: 12px;
-  margin-left: 4px;
   transition:
     color 0.5s ease,
     background-color 0.5s ease;
 }
 
 .menu {
+  display: flex;
+  gap: 4px;
   justify-self: end;
 }
 
@@ -282,14 +284,86 @@ a:active {
 }
 
 @media screen and (max-width: 768px) {
-  .menu-burger-mobile {
+  .menu {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100vh - 64px;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 0;
+    justify-content: center;
     align-items: center;
+    background-color: var(--static-white-color);
+    gap: 8px;
+
+    transition: all 0.4s ease;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  @keyframes menu-slides {
+    0% {
+      right: -100vw;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  .menu .menu-item {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 152%;
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+  }
+
+  .menu-burger-mobile {
+    width: 40px;
+    height: 9px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
     justify-self: end;
   }
 
-  .menu {
-    display: none;
+  .menu-burger-mobile::before {
+    position: absolute;
+    top: 0;
+    content: '';
+    height: 1px;
+    width: 20px;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu-burger-mobile::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    width: 20px;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu-burger-mobile.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+
+  .menu-burger-mobile.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
   }
 }
 
@@ -298,7 +372,7 @@ a:active {
     cursor: pointer;
   }
 
-  .menu-item:hover {
+  .menu-item:not(no-hover):hover {
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--primary-10-color);
