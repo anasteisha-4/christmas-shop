@@ -229,6 +229,7 @@ h1 {
 }
 
 #timer {
+  position: relative;
   width: 344px;
   height: 72px;
   display: flex;
@@ -241,6 +242,8 @@ h1 {
 }
 
 .time {
+  position: relative;
+  top: -3px;
   width: 80px;
   display: flex;
   flex-direction: column;

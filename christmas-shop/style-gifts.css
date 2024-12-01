@@ -53,6 +53,35 @@ h1 {
   width: min(1276px, 100%);
 }
 
+#scroll-arrow {
+  display: flex;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 56px;
+  height: 56px;
+  background: var(--static-white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#scroll-arrow.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-arrow svg {
+  stroke: var(--primary-color);
+}
+
 @media screen and (max-width: 767px) {
   #tabs {
     gap: clamp(0, 1vw, 8px);
