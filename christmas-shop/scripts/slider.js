@@ -3,21 +3,29 @@ const leftButtonElement = document.getElementById('left-arrow');
 const rightButtonElement = document.getElementById('right-arrow');
 
 let clickCount;
-let currentClickCount = 0;
-let position = 0;
-const sliderRect = sliderElement.getBoundingClientRect();
-const sliderFullWidth = Math.max(sliderElement.scrollWidth, sliderRect.width);
-const sliderVisibleWidth = Math.max(
-  0,
-  Math.min(sliderRect.right, window.innerWidth) - Math.max(sliderRect.left, 0)
-);
-if (document.documentElement.clientWidth >= 768) {
-  clickCount = 3;
-} else {
-  clickCount = 6;
-}
+let currentClickCount;
+let position;
+let offsetValue;
 
-const offsetValue = (sliderFullWidth - sliderVisibleWidth) / clickCount;
+const resetSlider = function () {
+  position = 0;
+  currentClickCount = 0;
+  let sliderRect = sliderElement.getBoundingClientRect();
+  let sliderFullWidth = Math.max(sliderElement.scrollWidth, sliderRect.width);
+  let sliderVisibleWidth = Math.max(
+    0,
+    Math.min(sliderRect.right, window.innerWidth) - Math.max(sliderRect.left, 0)
+  );
+  if (document.documentElement.clientWidth >= 768) {
+    clickCount = 3;
+  } else {
+    clickCount = 6;
+  }
+
+  offsetValue = (sliderFullWidth - sliderVisibleWidth) / clickCount;
+  sliderElement.style.transform = `TranslateX(${position}px)`;
+  toggleActiveButtons();
+};
 
 const toggleActiveButtons = function () {
   if (currentClickCount === 0) {
@@ -50,10 +58,12 @@ const rightButtonSlide = function () {
   toggleActiveButtons();
 };
 
-toggleActiveButtons();
+resetSlider();
 if (!leftButtonElement.classList.contains('inactive')) {
   leftButtonElement.addEventListener('click', leftButtonSlide);
 }
 if (!rightButtonElement.classList.contains('inactive')) {
   rightButtonElement.addEventListener('click', rightButtonSlide);
 }
+
+window.addEventListener('resize', resetSlider);
