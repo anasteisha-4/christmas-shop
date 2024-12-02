@@ -126,6 +126,7 @@ h1 {
   gap: 20px;
   padding: 20px 0px;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 .buttons-slider {
@@ -156,15 +157,16 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-left: 20px;
-}
-
-#left-arrow,
-#right-arrow {
   background-size: 20px;
   transition:
     background 0.5s ease,
     stroke 0.5s ease;
   stroke: var(--static-white-color);
+}
+
+#left-arrow.inactive,
+#right-arrow.inactive {
+  opacity: 0.4;
 }
 
 #BestGifts {
@@ -284,8 +286,8 @@ h1 {
     cursor: pointer;
   }
 
-  #left-arrow:hover,
-  #right-arrow:hover {
+  #left-arrow:not(.inactive):hover,
+  #right-arrow:not(.inactive):hover {
     stroke: var(--primary-color);
     background-color: var(--static-white-color);
     cursor: pointer;

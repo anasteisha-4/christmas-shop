@@ -37,8 +37,5 @@ function updateTime() {
   timerElements[1].firstElementChild.textContent = HOURS;
   timerElements[2].firstElementChild.textContent = MINUTES;
   timerElements[3].firstElementChild.textContent = SECONDS;
-  console.log(timerElements);
-
-  console.log(DAYS, HOURS, MINUTES, SECONDS);
 }
 setInterval(updateTime, 1000);
