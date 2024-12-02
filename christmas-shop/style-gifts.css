@@ -42,6 +42,10 @@ h1 {
   white-space: nowrap;
 }
 
+.tab.active {
+  background-color: var(--static-white-20-color);
+}
+
 #gifts-box {
   margin: 0;
   padding: 0;
@@ -98,7 +102,7 @@ h1 {
 }
 
 @media screen and (pointer: fine) {
-  .tab:hover {
+  .tab:not(.active):hover {
     background-color: var(--static-white-20-color);
     cursor: pointer;
   }
