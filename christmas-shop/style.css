@@ -236,10 +236,24 @@ a:active {
   justify-content: space-between;
 }
 
-.gift > img {
+.gift-image {
   width: 310px;
   height: 230px;
-  display: box;
+}
+
+.img-for-work {
+  background: url('img/gift-for-work.png') no-repeat center;
+  background-size: cover;
+}
+
+.img-for-health {
+  background: url('img/gift-for-health.png') no-repeat center;
+  background-size: cover;
+}
+
+.img-for-harmony {
+  background: url('img/gift-for-harmony.png') no-repeat center;
+  background-size: cover;
 }
 
 .bottom-panel {
