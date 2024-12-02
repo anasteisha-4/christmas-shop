@@ -1,7 +1,7 @@
 async function generateRandomGifts() {
-  const response = await fetch('gifts.json');
-  let giftsData = await response.json();
-  giftsData.sort(() => Math.random() - 0.5);
+  // const response = await fetch('gifts.json');
+  // let giftsData = await response.json();
+  // giftsData.sort(() => Math.random() - 0.5);
 
   const giftsContainerElement = document.querySelector('.gifts-container');
   const giftsElements = giftsContainerElement.children;
@@ -36,4 +36,4 @@ async function generateRandomGifts() {
   }
 }
 
-generateRandomGifts();
+loadGiftsData().then(() => generateRandomGifts());

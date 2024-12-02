@@ -1,5 +1,5 @@
 async function addAll(giftsContainerElement) {
-  const response = await fetch('gifts.json');
+  const response = await fetch('./gifts.json');
   let giftsData = await response.json();
   giftsData.sort(() => Math.random() - 0.5);
 
@@ -79,7 +79,7 @@ function changeActiveButton(activeTargetElement) {
 }
 
 const buttonContainerElement = document.getElementById('tabs');
-const giftsContainerElement = document.getElementById('gifts-box');
+const giftsContainerElement = document.querySelector('.gifts-container');
 addAll(giftsContainerElement);
 
 buttonContainerElement.addEventListener('click', (event) => {

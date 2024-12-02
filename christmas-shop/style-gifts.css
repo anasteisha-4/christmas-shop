@@ -46,7 +46,7 @@ h1 {
   background-color: var(--static-white-20-color);
 }
 
-#gifts-box {
+.gifts-container {
   margin: 0;
   padding: 0;
   display: grid;
