@@ -42,16 +42,16 @@ function createModal(giftInfo) {
 
   switch (category) {
     case 'For Work':
-      imageElement.classList.add('img-for-work');
-      categoryElement.classList.add('for-work');
+      imageElement.className = 'img-for-work';
+      categoryElement.className = 'header-4 for-work';
       break;
     case 'For Health':
-      imageElement.classList.add('img-for-health');
-      categoryElement.classList.add('for-health');
+      imageElement.className = 'img-for-health';
+      categoryElement.className = 'header-4 for-health';
       break;
     case 'For Harmony':
-      imageElement.classList.add('img-for-harmony');
-      categoryElement.classList.add('for-harmony');
+      imageElement.className = 'img-for-harmony';
+      categoryElement.className = 'header-4 for-harmony';
       break;
   }
   modalElement.style.display = 'flex';

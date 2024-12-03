@@ -10,14 +10,13 @@ function toggleScrollArrow() {
 
 function setButton() {
   if (document.documentElement.clientWidth <= 768) {
-    scrollArrowElement.style.display = '';
     toggleScrollArrow();
     window.addEventListener('scroll', toggleScrollArrow);
     scrollArrowElement.addEventListener('click', () => {
       window.scrollTo({ top: 0, right: 0, behavior: 'smooth' });
     });
   } else {
-    scrollArrowElement.style.display = 'none';
+    scrollArrowElement.classList.remove('active');
   }
 }
 

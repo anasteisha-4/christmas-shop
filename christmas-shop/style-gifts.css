@@ -106,4 +106,8 @@ h1 {
     background-color: var(--static-white-20-color);
     cursor: pointer;
   }
+
+  #scroll-arrow.active:hover {
+    cursor: pointer;
+  }
 }

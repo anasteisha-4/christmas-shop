@@ -319,10 +319,6 @@ a:active {
   justify-self: end;
 }
 
-#modal .exit:hover {
-  cursor: pointer;
-}
-
 #modal .exit::before {
   position: absolute;
   top: 50%;
@@ -484,6 +480,14 @@ a:active {
 }
 
 @media screen and (pointer: fine) {
+  .menu-burger-mobile:hover {
+    cursor: pointer;
+  }
+
+  #modal .exit:hover {
+    cursor: pointer;
+  }
+
   .logo-container:hover {
     cursor: pointer;
   }
