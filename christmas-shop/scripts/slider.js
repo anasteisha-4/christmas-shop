@@ -2,28 +2,25 @@ const sliderElement = document.getElementById('slide');
 const leftButtonElement = document.getElementById('left-arrow');
 const rightButtonElement = document.getElementById('right-arrow');
 
-let clickCount;
-let currentClickCount;
-let position;
-let offsetValue;
+let clickCount = 0;
+let currentClickCount = 0;
+let position = 0;
+let offsetValue = 0;
 
 const resetSlider = function () {
   position = 0;
   currentClickCount = 0;
-  let sliderRect = sliderElement.getBoundingClientRect();
-  let sliderFullWidth = Math.max(sliderElement.scrollWidth, sliderRect.width);
-  let sliderVisibleWidth = Math.max(
-    0,
-    Math.min(sliderRect.right, window.innerWidth) - Math.max(sliderRect.left, 0)
-  );
-  if (document.documentElement.clientWidth >= 768) {
+  const sliderRect = sliderElement.getBoundingClientRect();
+  const sliderFullWidth = sliderElement.scrollWidth;
+  const sliderVisibleWidth = sliderRect.width;
+  if (document.documentElement.clientWidth > 768) {
     clickCount = 3;
   } else {
     clickCount = 6;
   }
 
   offsetValue = (sliderFullWidth - sliderVisibleWidth) / clickCount;
-  sliderElement.style.transform = `TranslateX(${position}px)`;
+  sliderElement.style.transform = `translateX(${position}px)`;
   toggleActiveButtons();
 };
 
