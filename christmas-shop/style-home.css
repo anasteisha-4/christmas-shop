@@ -121,13 +121,13 @@ h1 {
 }
 
 #slide {
-  user-select: none;
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 20px 0px;
   box-sizing: border-box;
   transition: 0.3s;
+  user-select: none;
 }
 
 .buttons-slider {
@@ -183,6 +183,11 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.bestgifts-content > p,
+.bestgifts-content > h2 {
+  user-select: none;
 }
 
 .gifts-container {
