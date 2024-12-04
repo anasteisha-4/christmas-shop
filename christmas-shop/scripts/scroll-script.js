@@ -1,7 +1,7 @@
 let scrollArrowElement = document.getElementById('scroll-arrow');
 
 function toggleScrollArrow() {
-  if (window.scrollY >= 300) {
+  if (window.scrollY >= 300 && document.documentElement.clientWidth <= 768) {
     scrollArrowElement.classList.add('active');
   } else {
     scrollArrowElement.classList.remove('active');
