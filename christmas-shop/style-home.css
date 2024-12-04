@@ -121,6 +121,7 @@ h1 {
 }
 
 #slide {
+  user-select: none;
   display: flex;
   align-items: center;
   gap: 20px;

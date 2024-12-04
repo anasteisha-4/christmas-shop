@@ -10,9 +10,8 @@ let offsetValue = 0;
 const resetSlider = function () {
   position = 0;
   currentClickCount = 0;
-  const sliderRect = sliderElement.getBoundingClientRect();
-  const sliderFullWidth = sliderElement.scrollWidth;
-  const sliderVisibleWidth = sliderRect.width;
+  const sliderFullWidth = 1989;
+  const sliderVisibleWidth = sliderElement.offsetWidth;
   if (document.documentElement.clientWidth > 768) {
     clickCount = 3;
   } else {
