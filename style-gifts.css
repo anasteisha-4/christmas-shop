@@ -1,0 +1,113 @@
+main {
+  background:
+    url('img/bg-garland.png') no-repeat center top,
+    var(--primary-color);
+  background-size: contain;
+  border-radius: 20px;
+  padding: 60px 0;
+}
+
+h1 {
+  width: min(426px, 100%);
+  text-align: center;
+}
+
+#Gifts {
+  color: var(--static-white-color);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+#Gifts > * {
+  margin-bottom: 20px;
+}
+
+#tabs {
+  width: min(474px, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 8px 20px 8px;
+}
+
+.tab {
+  border-radius: 12px;
+  padding: 12px 20px;
+  transition: background-color 0.5s ease;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background-color: var(--static-white-20-color);
+}
+
+.gifts-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 310px);
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: min(1276px, 100%);
+}
+
+#scroll-arrow {
+  display: flex;
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 56px;
+  height: 56px;
+  background: var(--static-white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#scroll-arrow.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-arrow svg {
+  stroke: var(--primary-color);
+}
+
+@media screen and (max-width: 767px) {
+  #tabs {
+    gap: clamp(0, 1vw, 8px);
+  }
+  .tab {
+    padding: 12px clamp(8px, 2.1vw, 20px);
+  }
+}
+
+@media screen and (max-width: 395px) {
+  #tabs {
+    gap: 0;
+  }
+}
+
+@media screen and (pointer: fine) {
+  .tab:not(.active):hover {
+    background-color: var(--static-white-20-color);
+    cursor: pointer;
+  }
+
+  #scroll-arrow.active:hover {
+    cursor: pointer;
+  }
+}
