@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="img/logo-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
-    <link rel="stylesheet" href="style-gifts.css" />
+    <link rel="stylesheet" href="style-home.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,69 +19,174 @@
       href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Christmas gifts</title>
+    <title>Christmas Shop</title>
   </head>
+
   <body>
     <header>
-      <a href="/anasteisha-4-JSFE2024Q4/christmas-shop/" class="logo-container">
+      <a href="/christmas-shop/" class="logo-container">
         <img src="img/logo.svg" alt="logo snowflake" class="logo" />
         <span class="action-small">the gifts</span>
       </a>
       <div class="menu-burger-mobile"></div>
       <div class="menu">
-        <span
-          class="menu-item action-small no-hover"
-          style="
-            color: var(--primary-color);
-            background-color: var(--primary-10-color);
-          "
-        >
-          gifts
-        </span>
-        <a
-          href="/anasteisha-4-JSFE2024Q4/christmas-shop/#About"
-          class="menu-item action-small"
-        >
+        <a href="gifts" class="menu-item action-small">gifts</a>
+        <a href="/christmas-shop/#About" class="menu-item action-small">
           about
         </a>
-        <a
-          href="/anasteisha-4-JSFE2024Q4/christmas-shop/#BestGifts"
-          class="menu-item action-small"
-        >
+        <a href="/christmas-shop/#BestGifts" class="menu-item action-small">
           best
         </a>
         <a href="#footer" class="menu-item action-small">contacts</a>
       </div>
     </header>
     <main>
-      <section id="Gifts">
-        <h1 class="header-1">Achieve health, harmony, and inner strength</h1>
-        <div id="tabs">
-          <div class="tab action-small active">All</div>
-          <div class="tab action-small">For Work</div>
-          <div class="tab action-small">For Health</div>
-          <div class="tab action-small">For Harmony</div>
+      <section id="Hero">
+        <div id="content-hero">
+          <p class="caption">Merry Christmas</p>
+          <h1 class="header-1">Gift yourself the magic of new possibilities</h1>
+          <a href="gifts" class="button action-small">Explore Magical Gifts</a>
+          <p class="caption">and Happy New Year</p>
         </div>
-        <div class="gifts-container"></div>
       </section>
+      <section id="About">
+        <div id="content-about">
+          <div id="text-about">
+            <p class="caption" style="color: var(--primary-color)">About</p>
+            <h2 class="header-2">Unleash your inner superhero!</h2>
+            <p class="paragraph">
+              This New Year marks the beginning of your journey to inner harmony
+              and new strengths. We offer unique gifts that will help you
+              improve your life.
+            </p>
+          </div>
+          <img src="img/santa.png" alt="santa" />
+        </div>
+      </section>
+      <section id="Slider">
+        <div class="slider-content">
+          <p class="caption" style="padding-bottom: 12px">Become Happier!</p>
+          <h2 class="header-2">In the new 2025</h2>
+          <div id="slide">
+            <p class="slider-text">Live</p>
+            <img src="img/snowman.png" alt="snowman" />
+            <p class="slider-text">Create</p>
+            <img src="img/christmas-trees.png" alt="christmas-trees" />
+            <p class="slider-text">Love</p>
+            <img src="img/christmas-tree-ball.png" alt="christmas-tree-ball" />
+            <p class="slider-text">Dream</p>
+            <img src="img/fairytale-house.png" alt="fairytale-house" />
+          </div>
+          <div class="buttons-slider">
+            <div id="left-arrow">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.5 12H6M6 12L12 6M6 12L12 18"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div id="right-arrow">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="BestGifts">
+        <div class="bestgifts-content">
+          <p
+            class="caption"
+            style="color: var(--static-white-color); margin-bottom: 12px"
+          >
+            Best Gifts
+          </p>
+          <h2 class="header-2" style="color: var(--static-white-color)">
+            Especially for you
+          </h2>
+          <div class="gifts-container">
+            <div class="gift">
+              <div class="gift-image"></div>
+              <div class="bottom-panel">
+                <h4 class="header-4">Loading...</h4>
+                <h3 class="header-3 gift-name">Loading...</h3>
+              </div>
+            </div>
+            <div class="gift">
+              <div class="gift-image"></div>
+              <div class="bottom-panel">
+                <h4 class="header-4">Loading...</h4>
+                <h3 class="header-3 gift-name">Loading...</h3>
+              </div>
+            </div>
+            <div class="gift">
+              <div class="gift-image"></div>
+              <div class="bottom-panel">
+                <h4 class="header-4">Loading...</h4>
+                <h3 class="header-3 gift-name">Loading...</h3>
+              </div>
+            </div>
+            <div class="gift">
+              <div class="gift-image"></div>
+              <div class="bottom-panel">
+                <h4 class="header-4">Loading...</h4>
+                <h3 class="header-3 gift-name">Loading...</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="CTA">
+        <div id="content-cta">
+          <h2 class="header-2">
+            Ready to start your journey to a better version of yourself?
+          </h2>
 
-      <div id="scroll-arrow">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 5V19" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M18 11L12 5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path d="M6 11L12 5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
+          <a href="gifts" class="button action-small">Explore Magical Gifts</a>
+          <div id="subcontent-cta">
+            <p class="caption">The New Year is Coming Soon...</p>
+            <div id="timer">
+              <div class="time">
+                <h2 class="header-2">0</h2>
+                <h4 class="header-4">days</h4>
+              </div>
+              <div class="separator"></div>
+              <div class="time">
+                <h2 class="header-2">0</h2>
+                <h4 class="header-4">hours</h4>
+              </div>
+              <div class="separator"></div>
+              <div class="time">
+                <h2 class="header-2">0</h2>
+                <h4 class="header-4">minutes</h4>
+              </div>
+              <div class="separator"></div>
+              <div class="time">
+                <h2 class="header-2">0</h2>
+                <h4 class="header-4">seconds</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <article id="modal">
         <div id="modal-content">
           <div class="exit"></div>
@@ -252,9 +357,10 @@
       </div>
     </footer>
     <script src="scripts/burger-script.js"></script>
-    <script src="scripts/scroll-script.js"></script>
+    <script src="scripts/timer-script.js"></script>
+    <script src="scripts/slider.js"></script>
     <script src="scripts/load-gifts-data.js"></script>
-    <script src="scripts/change-categories.js"></script>
+    <script src="scripts/best-gifts-gen.js"></script>
     <script src="scripts/modal.js"></script>
   </body>
 </html>
